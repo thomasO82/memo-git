@@ -28,7 +28,7 @@
 
 ## 🛠 **Étapes du Workflow**
 
-### 1️⃣ **Initialisation du projet**
+### 1️⃣ **Initialisation du projet (par le Chef de Projet uniquement)**
 ```bash
 git init
 git remote add origin https://github.com/organisation/projet.git
@@ -44,7 +44,8 @@ git push -u origin develop
 ```bash
 git clone https://github.com/organisation/projet.git
 cd projet
-git checkout -b develop origin/develop
+git checkout develop
+git pull origin develop
 git checkout -b prenom-cp  # Pour le CP
 git push -u origin prenom-cp
 git checkout -b prenom-dev  # Pour le DEV
@@ -118,7 +119,7 @@ git push origin main
 
 ## 📌 **Mémo des commandes Git utilisées**
 
-### 📁 **Initialisation du projet**
+### 📁 **Initialisation du projet** (par le CP uniquement)
 - `git init` → Initialise un dépôt Git.
 - `git remote add origin URL` → Associe le dépôt local à un dépôt distant.
 - `git checkout -b NOM-BRANCHE` → Crée et bascule sur une nouvelle branche.
@@ -126,7 +127,8 @@ git push origin main
 
 ### 📥 **Récupération du projet et création des branches personnelles**
 - `git clone URL` → Clone le projet.
-- `git checkout -b develop origin/develop` → Crée et bascule sur `develop`.
+- `git checkout develop` → Se place sur `develop`.
+- `git pull origin develop` → Récupère les dernières mises à jour.
 - `git checkout -b NOM-BRANCHE` → Crée une nouvelle branche locale.
 - `git push -u origin NOM-BRANCHE` → Envoie la branche vers le dépôt distant.
 
